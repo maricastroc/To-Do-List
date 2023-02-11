@@ -1,0 +1,178 @@
+/* Geral */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Titillium Web";
+    color: #333;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #fdfdfd;
+    --primary-color: #08162b;
+    --secondary-color: #2b455e;
+    --light-color: #cccccc;
+}
+
+body {
+    background-image: url(./images/158934.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+button:hover > i {
+    color: var(--bg-color);
+}
+
+/* Desabilitar o evento de clique no ícone, para que ele não atrapalhe o acionamento do evento 
+do botão. Assim, quando o usuário clica no ícone, é como se ele tivesse clicado no botão. */
+
+button i {
+    color: var(--primary-color);
+    font-weight: bold;
+    pointer-events: none;
+}
+
+input,
+select {
+    padding: 0.25rem 0.5rem;
+    border: solid 2px;
+}
+
+/* Classe para esconder as coisas - hide */
+.hide {
+    display: none;
+}
+
+/* To-Do Header */
+.to-do-container {
+    background-color: var(--bg-color);
+    max-width: 450px;
+    margin: 3rem auto;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.to-do-container header {
+    text-align: center;
+    font-family: "Titillium Web";
+    font-weight: 500;
+    padding: 0 1rem 1rem;
+    border-bottom: 2px solid var(--light-color);
+}
+
+/* To-Do Form */
+#to-do-form,
+#edit-form {
+    padding: 1rem;
+    border-bottom: 2px solid var(--light-color);
+}
+
+#to-do-form p,
+#edit-form p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#cancel-edit-btn {
+    margin-top: 1rem;
+}
+
+/* To-Do ToolBar */
+#toolbar {
+    padding: 1rem;
+    display: flex;
+    gap: 4rem;
+    border-bottom: 2px solid var(--light-color);
+}
+
+#toolbar h4 {
+    margin-bottom: 0.5rem;
+}
+
+#search {
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#search input {
+    width: 100%;
+}
+
+#filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter-select {
+    padding-right: 2rem;
+    text-align: start;
+    flex: 1;
+}
+
+/* To-Do List */
+
+.to-do {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem;
+    border-bottom: 2px solid var(--light-color);
+    transition: 0.3s;
+}
+
+.to-do h3 {
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+.to-do button {
+    margin-left: 0.4rem;
+}
+
+.done {
+    background-color: var(--secondary-color);
+}
+
+.done h3 {
+    color: var(--bg-color);
+    text-decoration: line-through;
+    font-weight: 400;
+    font-style: italic;
+}

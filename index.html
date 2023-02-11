@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="images/favicon.png" />
+        <meta charset="UTF-8" />
+        <meta
+            http-equiv="X-UA-Compatible"
+            content="IE=edge"
+        />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+
+        <!-- Favicon -->
+        <link
+            rel="shortcut icon"
+            href="./images/noun-list-1057907.png"
+            type="image/x-icon"
+        />
+
+        <!-- FONT LINKS -->
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+        />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- CSS Style -->
+        <link rel="stylesheet" href="./styles.css" />
+
+        <title>My To-Do List</title>
+    </head>
+    <body>
+        <!-- JS Script -->
+        <script src="./scripts.js" defer></script>
+
+        <div class="to-do-container">
+            <header>
+                <h1>To-Do List</h1>
+            </header>
+            <form id="to-do-form">
+                <p>Add here your task:</p>
+                <div class="form-control">
+                    <input
+                        type="text"
+                        id="to-do-input"
+                        placeholder="What are you gonna do?"
+                    />
+                    <button type="submit">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </form>
+            <form id="edit-form" class="hide">
+                <p>Edit your task:</p>
+                <div class="form-control">
+                    <input type="text" id="edit-input" />
+                    <button>
+                        <i
+                            class="fa-solid fa-check-double"
+                        ></i>
+                    </button>
+                </div>
+                <button type="button" id="cancel-edit-btn">
+                    Cancel
+                </button>
+            </form>
+            <div id="toolbar">
+                <div id="search">
+                    <h4>Search:</h4>
+                    <form>
+                        <input
+                            type="text"
+                            id="search-input"
+                            placeholder="Search..."
+                        />
+                        <button id="erase-button">
+                            <i
+                                class="fa-solid fa-delete-left"
+                            ></i>
+                        </button>
+                    </form>
+                </div>
+                <div id="filter">
+                    <h4>Filter:</h4>
+                    <select id="filter-select">
+                        <option value="all">All</option>
+                        <option value="done">Done</option>
+                        <option value="toDo">To-Do</option>
+                    </select>
+                </div>
+            </div>
+            <div id="to-do-list">
+                <div class="to-do done">
+                    <h3>I'm saving the world...</h3>
+                    <button class="finish-to-do">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                    <button class="edit-to-do">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="remove-to-do">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="to-do">
+                    <h3>I'm letting the world save me.</h3>
+                    <button class="finish-to-do">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                    <button class="edit-to-do">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="remove-to-do">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
