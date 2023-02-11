@@ -1,2 +1,2 @@
 # To-Do-List
-To-Do List with HTML/CSS/JS
+This is a basic To-Do List application, with search and filtering tools.
